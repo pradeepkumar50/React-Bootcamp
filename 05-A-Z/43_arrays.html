@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <script>
+        // array methods
+
+        // slice method doesn't change the original array
+        // It returns a new array
+
+        let arr = ['pradeep', 'kumar', 'kairamkonda', 'ane', 'sashanam', 'dwara', 'nirmithamaina'];
+
+        console.log(arr.slice(2));
+        console.log(arr.slice(2, 4));
+        console.log(arr.slice(-2));
+        console.log(arr, 'original arry does not change here ');
+
+        // splice
+        // changes the original array
+
+        console.log(arr.splice(2));
+        console.log(arr.splice(-1));
+        console.log(arr, 'original array change');
+
+
+        // reverse
+
+        // mutate the  original array
+
+        let arr2 = ['pradeep', 'kumar', 'kairamkonda', 'ane', 'sashanam', 'dwara', 'nirmithamaina'];
+        console.log(arr2.reverse());
+        console.log(arr2);
+
+
+        //  concate 
+
+        // doesn't mutate the original array
+
+        let data = [1, 2, 3];
+        let data2 = [4, 5];
+
+        let result = data.concat(data2);
+        console.log(result);
+        console.log([...data, ...data2]);
+
+
+        // At method
+
+        console.log(data.at(1));
+
+        // getting last element in array
+
+        console.log(data.at(-1));
+        console.log(data.slice(-1)[0]);
+        console.log(data[data.length - 1]);
+
+        // for Each method
+
+        let languages = ['telugu', 'hindi', 'english', 'maths', 'social', 'biology'];
+
+        languages.forEach((item) => {
+            console.log(item);
+        });
+
+
+        let friends = ['sai', 'bala', 'and', 'pradeep', 'are', 'friends'];
+        friends.forEach((item) => {
+            console.log(item);
+        });
+
+
+        // other way using for of 
+
+        for (let item of friends) {
+            console.log(item);
+        };
+
+
+
+        // for each method using with maps and sets
+
+        let currencies = new Map([
+            ['USD', 'united states dollar'],
+            ['EUR', 'Euro'],
+        ]);
+
+        currencies.forEach((k, v, m) => {
+            console.log(`The ${v},${k},${m} `, typeof currencies);
+        })
+
+
+        // set gets the unique values
+
+        let currenciesUnique = new Set(['a', 'b', 'b', 'c', 'c']);
+        console.log(currenciesUnique, typeof currenciesUnique);
+
+
+        // map method
+
+        let cost = [1, 2, 3, 4, 5];
+        var output = cost.map((item) => {
+            return item * 2;
+        });
+
+        console.log(output);
+
+
+        let fullName = 'Pradeep Kumar Kairamkonda';
+
+        let userName = fullName.toLocaleLowerCase().split(" ").map((item) => {
+            return item[0]
+        }).join('');
+        console.log(userName, "##");
+
+
+        // filter method
+
+
+        let cost2 = cost.filter((item) => {
+            if (item % 2 == 0) {
+                console.log('It is a even number');
+            } else {
+                console.log('odd number')
+            }
+        });
+
+
+        // Reduce method
+
+        let cost3 = cost.reduce((acc,current)=>{
+            console.log(acc, current);
+            return acc + current;
+        });
+
+        console.log(cost3);
+
+
+        // find method returns first element when it matches
+        // filter method return all elements in array
+
+        // both are similar
+
+        let cost4 = cost.find((item)=>{
+            return item > 4;
+        })
+
+        console.log(cost4);
+
+
+        // find Index
+
+        let cost5 = cost.findIndex((item)=>{
+            return item == 3;
+        })
+
+        console.log(cost5);
+
+        // includes method
+
+        let cost6 = cost.includes(4);
+        console.log(cost6);
+
+
+        // some and every methods
+
+        // some returns true or false.
+
+        let cost7 = cost.some((item)=>{
+            return item > 5;
+        })
+
+        console.log(cost7);
+
+        // every method
+
+        // returns only true only when all elements satisfies the condition
+
+        let cost8 = cost.every((item)=>{
+            return item > 0;
+        })
+
+        console.log(cost8);
+
+        let cost9 = [1,2,3, [4,5],[6,7]];
+        let cost10 = cost9.flat();
+
+        console.log(cost10);
+
+        // sort method
+
+        let names = ['k','p','a','d'];
+        console.log(names.sort());
+
+    </script>
+</body>
+</html>

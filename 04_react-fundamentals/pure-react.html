@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://unpkg.com/react@18/umd/react.development.js">
+        // core react library 
+    </script> 
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
+        // react dom basically a rendering layer which can layer react component into dom. Since we want to render in the browser,
+        // we need to use react dom
+    </script>
+    <title>Pure React</title>
+</head>
+<body>
+    <!-- // This is pure react without build tool -->
+    <div id="root"></div>
+    <script>
+        function App() {
+            return React.createElement("header", null, "I'm Pradeep Kumar Kairamkonda");
+        }
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        console.log(root);
+        root.render(React.createElement(App, ));
+    </script>
+</body>
+</html>

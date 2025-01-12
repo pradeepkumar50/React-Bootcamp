@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops</title>
+</head>
+
+<body>
+    <script>
+        for (var i = 1; i < 10; i++) {
+            console.log(`I'm pradeep kumar and my fucker friend is bala ${i} times `)
+        }
+
+        // looping arrays
+
+        let data = ["pradeep", "kumar", 495, true, [1, 2, 3]];
+
+        for (let i = 0; i < data.length; i++) {
+            console.log(data[i], typeof data[i], '***');
+        }
+
+
+        // contiune and break
+
+        // continue to exit the current iration of the loop and continue to the next one.
+        // break is completely terminate the whole loop
+
+        // continue example
+
+        for (let i = 0; i < data.length; i++) {
+            if (typeof data[i] !== 'string') continue;
+            console.log(data[i], typeof data[i], '##');
+
+        }
+
+
+        // break example
+
+        for (let i = 0; i < data.length; i++) {
+            if (typeof data[i] === 'number') break;
+            console.log(data[i], typeof data[i], '??');
+
+        }
+
+
+        // loops from backward
+
+        let info = ["pradeep", "kumar", 495, true, [1, 2, 3]];
+
+        for (var i = info.length - 1; i >= 0; i--) {
+            console.log(info[i], i)
+        }
+
+
+        // loops inside loops called nested loops
+
+        for (var i = 1; i <= 3; i++) {
+            console.log(`exercise------------ ${i}`)
+            for (var j = 1; j < 5; j++) {
+                console.log(`${i} pradeep kumar ------------ ${j}`)
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body>
+    <script>
+        let data = {
+            firstName: 'pradeep',
+            lastName: 'kumar',
+            "area code": 50990,
+            id: 495,
+            friends: ['pradeep', 'kumar', 'netha'],
+            isValid: false,
+
+            /* calAge : function(birthYear) {
+                return 2024 - birthYear;
+            } */
+
+            calId: function () {
+                console.log(this)
+                return 900 - this.id;
+            }
+        }
+
+        console.log(data);
+        console.log(data.friends[0]);
+        console.log(data['firstName']);
+        console.log(data["area code"]);
+
+        /*  let example = prompt('enter the value');
+         
+         //  In this case we use bracket notation
+ 
+         if(data[example]) {
+             console.log(data[example]);
+         } else {
+             console.log('you entered wrong value');
+         } */
+
+        console.log(`${data.firstName} has ${data.friends.length} friends`);
+
+        // object mehtods
+
+        // Any function that is attached to object is called method.
+
+        //console.log(data.calAge(1997));
+
+        console.log(data.calId());
+    </script>
+</body>
+
+</html>

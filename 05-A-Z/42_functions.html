@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+</head>
+
+<body>
+    <script>
+
+        // function Declaration
+
+        function fruits(apples, bananas) {
+            let total = apples + bananas;
+            console.log(total);
+            return total;
+        }
+        console.log(fruits(2, 4));
+
+        // function Expression
+
+        let fruit = function (apples, bananas) {
+            let result = apples + bananas;
+            return result;
+        }
+
+        let fruitOut2 = fruit(2, 3);
+        console.log(fruitOut2);
+
+
+        // Arrow functions
+
+        let fruitCal = (apples, bananas) => {
+            let output = apples + bananas;
+            return output;
+        }
+
+        let fruitOut = fruitCal(33, 2);
+        console.log(fruitOut)
+
+
+        // single line arrow function
+
+        let mainFruit = () => console.log("pradeep");
+        mainFruit();
+
+
+        // Default parameters
+
+        // let mains = []
+
+        let laptop = function (name, price = 5000, company = "cognizant") {
+
+            const main = {
+                name,
+                price,
+                company,
+            }
+            console.log(main, '###');
+
+            //  mains.push(main)
+
+        }
+
+        let out = laptop("lenovo Yoga", 2000, "visa");
+        console.log(out);
+
+
+
+        // function example
+
+        function addCal(a, b) {
+
+            let res = a + b;
+            console.log(res);
+            return res;
+
+        }
+
+        let mainOutput = addCal(2, 3);
+        console.log(mainOutput);
+
+        // passing arguments 
+
+        const flight = "kpr123";
+        const jones = {
+            name: 'KP',
+            passport: 2345678
+        }
+
+        const checkIn = function (flightNum, passenger) {
+            flightNum = 'KP12345';
+            passenger.name = passenger.name;
+
+            if(passenger.passport == 2345678 ) {
+                console.log('right passport');
+            } else {
+                console.log('wrong passport');
+            }
+        }
+
+        checkIn(flight, jones);
+
+
+        // first class or higher order functions
+
+        // functions that receives another function as an argument 
+
+        // or
+
+        // A function that returns new function is called higher order functions
+
+    </script>
+
+</body>
+
+</html>
