@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Destructing Arrays</title>
 </head>
 
 <body>
@@ -26,19 +26,66 @@
             location: "Uppal, Hyderabad, India",
             catagerios: ["veg", "Non-veg", "oragnaic", "italian"],
             starterMenu: ["salad", "chicken", "mutton", "fish", "pulav"],
-            mainMenu: ["pizza", "pasta"]
-        }
+            mainMenu: ["pizza", "pasta"],
+
+            order: function (starterIndex, mainIndex) {
+                return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+            },
+
+            swiggy: function (person, id) {
+                return [this.starterMenu[person], this.mainMenu[id]];
+            }
+        };
+
+        console.log(resturant);
+
+        let arr = [1, 2, 3];
+
+        let [x, y, z] = arr;
+        console.log(x, y, z);
+        console.log(arr);
+
+        let [first, , second] = resturant.catagerios;
+
+        // second element would be skipped if we give , ,
+
+        console.log(first, second);
+
+        // switching the variables nomarlly 
+
+        /*  let result = first; // veg
+ 
+         first = second;  // veg = organic
+         second = result; // organic = veg
+ 
+         console.log(first, second); //  orgnaic, veg */
 
 
+        //switching variables using with destructing array
+        // No need to add any temporary variable using with destructing array
 
+        [first, second] = [second, first];
+        console.log(first, second);
 
+        // recives to return values from function
 
+        console.log(resturant.order(2, 0))
 
+        let [starter, main] = resturant.order(2, 0);
+        console.log(starter, main);
 
+        console.log(resturant.swiggy(3, 1))
 
+        // nested array
 
+        let [p, q, [r]] = [1, 2, [3, 4, 5]];
+        console.log(p, q, r);
 
-        
+        // default values
+
+        let [a = 1, b = 2, c, d = "pradeep"] = [2, 3, 4];
+        console.log([a, b, c, d]);
+
     </script>
 </body>
 

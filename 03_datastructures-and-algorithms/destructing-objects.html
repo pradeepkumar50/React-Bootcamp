@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructing Objects</title>
+</head>
+<body>
+    <script>
+        let resturant = {
+            name: "chasers",
+            location: "Uppal, Hyderabad, India",
+            catagerios: ["veg", "Non-veg", "oragnaic", "italian"],
+            starterMenu: ["salad", "chicken", "mutton", "fish", "pulav"],
+            mainMenu: ["pizza", "pasta"],
+
+            order: function (starterIndex, mainIndex) {
+                return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+            },
+
+            swiggy: function (person, id) {
+                return [this.starterMenu[person], this.mainMenu[id]];
+            },
+            
+        };
+    </script>
+</body>
+</html>
