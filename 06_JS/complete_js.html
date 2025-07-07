@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type conversion and type coercion</title>
+</head>
+
+<body>
+    <script>
+        // Type conversion is when we manually convert from one type to another type.
+
+        // Type coercion is when javascript always converts the types behind the scenes for us.
+
+        // NaN means invalid number
+
+        let firstYear = '1947';
+        let secondYear = 1948;
+
+        firstYear = Number(firstYear);
+
+        console.log(firstYear + secondYear);
+
+        console.log(typeof NaN);
+        console.log(String(19));
+
+
+        // Type coercion
+
+        console.log("I'm " + 25 + " years old");
+
+
+        // Truthy and Falsy values
+
+        // In javascript there are only 5 falsy values
+
+        // 0, "", undefined, null, NaN
+
+        // Everything else are truthy values
+
+        console.log(Boolean(0), Boolean(""), Boolean(undefined), Boolean(null), Boolean(NaN));
+
+        let company; // undefined
+        if (company) {
+            console.log("this is no company");
+        } else {
+            console.log("It's a falsy value, so it's printing else condition");
+        };
+
+        // Equality operators (== and ===)
+
+        // === is a strict equality operator.
+
+        let age = "18";
+
+        if (age === 18) console.log("You just turned into adult");
+        if (age == 18) console.log("You just turned into adult");
+
+
+        // Boolean logic
+
+        let scoreDolphins;
+        let scoreKoalas;
+
+        scoreDolphins = 96 + 108 + 89 / 3;   // 233
+        console.log(scoreDolphins);
+
+        scoreKoalas = 88 + 91 + 110 / 3;  // 215
+        console.log(scoreKoalas);
+
+        if (scoreDolphins > scoreKoalas) {
+            console.log("Dolphins win the trophy");
+        } else if (scoreDolphins < scoreKoalas) {
+            console.log("Koalas win the trophy");
+        } else if (scoreDolphins === scoreKoalas) {
+            console.log("Both win the throphy");
+        } else {
+            console.log("It's a error.");
+        }
+
+
+        // switch statement
+
+        /*   2. Write a program to prompt the user to enter a day (like Monday, Tuesday, Wednesday, etc). 
+             Based on the value entered by the user, display a special dish. For example,
+             if the user enters Monday then alert "Mondays, We serve Pasta". 
+             If the user enters Friday then alert "Fridays, we serve Tacos". */
+
+        // let day = prompt("Enter a day");
+        let day = "thrusday"
+
+        switch (day) {
+            case 'monday' || 'Monday':
+                console.log("We serve pasta");
+                break;
+            case 'tuesday' || "Tuesday":
+                console.log("We serve chicken");
+                break;
+            case 'wednesday' || "Wednesday":
+                console.log("We serve Mutton");
+                break;
+            case 'thrusday' || "Thrusday":
+                console.log("we serve biryani");
+                console.log("we serve curd");
+                break;
+            case 'friday' || "Friday":
+                console.log("Fasting");
+                break;
+            case 'saturday' || "Saturday":
+            case 'sunday' || "Sunday":
+                console.log("lord venkat why are you killing me");
+                break;
+            default:
+                console.log("please enter right value");
+        }
+
+        // statements and expressions
+
+        // 3 + 4 is an expression
+        // true && false && !true is an expression
+
+        // statement
+        // if (scoreDolphins > scoreKoalas) {
+        //   console.log("Dolphins win the trophy");
+        // }
+
+
+        // conditional or terinary operator
+
+        let id = 495;
+        id === 495 ? console.log("pradeep") : console.log("pramod");
+        console.log(id); // 495
+        console.log("pradeep kumar kairamkonda");
+
+        // live server is woking perfectlye
+
+        // using the resources using stack overflow and google and MDN, javascript.info
+
+        // continue means the rest of the iteration will not be executed.
+
+        // debugging
+
+        // debugging means to find and fix the errors.
+
+        // software bug
+
+        // Defect or problem in a computer program.
+
+        console.warn("pradeep kumar kairamkonda");
+
+        // console. table
+
+        let data = {
+            name: "pradeep",
+            id: 495,
+            school: "krishnaveni talent school",
+            friend: "pramod reddy"
+        };
+
+        console.table(data);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

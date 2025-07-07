@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variables</title>
+</head>
+
+<body>
+    <script>
+        var studentName = "pradeep";
+        var lastName = "kumar";
+        console.log(studentName, lastName);
+        var studentName = "sandeep";
+        console.log(studentName, lastName);
+
+        // data types are of two types
+
+        // premitive data types
+
+        /*
+
+        Number
+        boolean
+        string
+        null
+        undefined
+        symbol
+        bigint
+
+
+        // non premitive data types
+
+        objects
+
+        */
+
+        let number = 495;
+        console.log(number);
+
+        let isValid = false;
+        console.log(isValid);
+
+        let firstName = "pradeep kumar";
+        console.log(firstName);
+
+        let data = null;
+        console.log(data);
+
+        let laptopName;
+        console.log(laptopName);
+
+        console.log(typeof number, typeof isValid, typeof firstName, typeof data, typeof laptopName);
+
+        // typeof data here is object because it is a bug in javascript.
+
+        // let is block scope and var is functional scope.
+
+        // var and let are mutable.
+
+        // const are unmutable.
+
+        var id = 495;
+        id = 496
+        console.log(id);
+
+        // Above one is mutable we can change the value.
+
+        let job = "full stack developer";
+        job = "full stack web developer";
+        console.log(job);
+
+        // let is mubtable because we can change a value.
+
+
+        const company = "Apple";
+        company = "amazon";
+        console.log(company);
+
+        // It throw errors because we cannot reassign a value in const. It unmutable we cannot change the value.
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
